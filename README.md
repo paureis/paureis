@@ -23,7 +23,7 @@ Also in daily use: Claude (API and Claude Code), Playwright, pgTAP, mutation tes
 - **MiConsultorio**: clinic management for medical and dental practices in Venezuela. In production, pre-launch.
 - **RefreshRadar**: monitoring for Power BI refreshes. Live at [refreshradar.com](https://refreshradar.com).
 - **Talent Scout Pro**: a multi-tenant recruiting platform in production with two healthcare organizations.
-- **pau-skills**: the Claude Code skills and scripts I use every day, packaged so others can reap the benefits as well. *Coming soon.*
+- **[pau-skills](https://github.com/paureis/pau-skills)**: the Claude Code skills, hooks and scripts I use every day, packaged as a plugin marketplace so others can reap the benefits as well.
 - **PauPortfolio**: my portfolio site, a closer look at my work and what I do off the clock. *Coming soon.*
 
 ---
