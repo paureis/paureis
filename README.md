@@ -4,6 +4,16 @@
 
 Broward County, Florida · open to full-time roles and selected freelance work
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alpaureis/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:alpau.reis@gmail.com)
+[![Certifications](https://img.shields.io/badge/Certifications-FF6B00?style=flat&logo=credly&logoColor=white)](https://www.credly.com/users/alpaureis)
+
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,supabase,postgres,azure,aws,vercel,rust,tauri,py,cs,redis,vitest,githubactions&perline=16" alt="TypeScript, Next.js, React, Tailwind, Supabase, PostgreSQL, Azure, AWS, Vercel, Rust, Tauri, Python, C#, Redis, Vitest, GitHub Actions" />
+</p>
+
+Also in daily use: Claude (API and Claude Code), Playwright, pgTAP, mutation testing, Stripe, DuckDB, Ollama.
+
 ---
 
 ## What I'm working on now
@@ -20,13 +30,16 @@ Broward County, Florida · open to full-time roles and selected freelance work
 
 ## Featured work
 
-Most of what I build lives in private repositories, so here is what's inside them.
+Most of what I build lives in private repositories, so here is what's inside them. Open any project for its architecture diagram and engineering notes.
 
 ### MiConsultorio · clinic management
 
 Scheduling, patient records with clinical history and odontogram, billing in two currencies, inventory, memberships, WhatsApp reminders, a patient portal and an audit trail, for small practices that today run on paper and chat messages. I am the sole engineer; a partner leads the commercial side.
 
 **Stack:** Next.js 16 (App Router) · TypeScript · Tailwind v4 · Supabase (Postgres 17, Auth, Storage) · Vercel · Vitest · Playwright
+
+<details>
+<summary><b>Architecture and engineering notes</b></summary>
 
 ```mermaid
 flowchart LR
@@ -47,11 +60,16 @@ flowchart LR
 - **261 end-to-end tests run from a freshly seeded database** on every pull request, next to unit and row-level-security suites. A flaky test is treated as a defect.
 - **Staging and production are separate projects**; migrations are additive and reach staging before a merge.
 
+</details>
+
 ### RefreshRadar · Power BI refresh monitoring
 
 Catches failed, missed and silently disabled dataset refreshes, explains the error in plain language and alerts by email or webhook. Self-serve, with Stripe subscriptions. Live at [refreshradar.com](https://refreshradar.com).
 
 **Stack:** Next.js 16 · TypeScript · Supabase Postgres (forced RLS) · Microsoft Entra ID · Azure Key Vault · Stripe · Resend · Vercel Cron · Claude through Vercel AI Gateway
+
+<details>
+<summary><b>Architecture and engineering notes</b></summary>
 
 ```mermaid
 flowchart LR
@@ -72,11 +90,16 @@ flowchart LR
 - **The architecture document cannot go stale.** A test fails CI if the architecture manifest and the code disagree, in either direction.
 - **About 1,700 unit, 300 integration and 129 database tests**, plus eight custom static gates (for example: privileged database imports only from one layer; the cron schedule in config must equal the constant in code).
 
+</details>
+
 ### Talent Scout Pro · multi-tenant recruiting platform
 
 A B2B SaaS used in production by two healthcare organizations. I am the founder and sole engineer. Details of the product are deliberately brief here; the engineering side is definitely not.
 
 **Stack:** Next.js 16 · TypeScript · Azure App Service · Azure Functions · Storage Queues · serverless Azure SQL · Key Vault · Redis · Entra ID SSO · Stripe · Claude
+
+<details>
+<summary><b>Architecture and engineering notes</b></summary>
 
 ```mermaid
 flowchart LR
@@ -96,11 +119,16 @@ flowchart LR
 - **Cost is engineered, not assumed**: token cost is recorded per call, and a billing regression in a serverless database was diagnosed from the invoice and fixed with budget alerts added.
 - **Separate staging and production pipelines**, about 590 tests, and a strict content security policy.
 
+</details>
+
 ### Desktop log-analysis workbench · Rust
 
 An offline-first desktop tool for database consultants: it ingests SQL Server diagnostic logs, stores them locally and drafts findings that a person approves before anything is delivered.
 
 **Stack:** Tauri v2 · Rust · React · TypeScript · DuckDB · Ollama or Azure OpenAI
+
+<details>
+<summary><b>Architecture and engineering notes</b></summary>
 
 ```mermaid
 flowchart LR
@@ -115,6 +143,8 @@ flowchart LR
 - **Analysis can run fully offline** with a local model; cloud models are an optional upgrade behind one interface.
 - **A tamper-evident audit log** (hash chain with an integrity verifier) for everything delivered to a client.
 - **Encrypted at rest with the key in the operating system keystore**, tested on real Windows runners in CI. About 310 tests.
+
+</details>
 
 ### Open source
 
@@ -131,17 +161,6 @@ flowchart LR
 - **AI agents with a process around them.** I orchestrate multi-agent work the way I would run a small team: read-only agents audit the code before a design exists, a critic reads the brief before a builder touches anything, the builder's report has a "not done" section, and review loops are capped. Mutation testing checks that the tests can actually fail. Nothing is merged or pushed until I review it and approve.
 - **I measure cost**: CI minutes, model tokens, cloud invoices.
 
-## Stack
-
-- **Languages** · TypeScript, Python, C#, Rust, SQL
-- **Web** · Next.js (App Router), React, Tailwind
-- **Data** · PostgreSQL (Supabase, row-level security), Azure SQL, DuckDB, Redis
-- **Cloud** · Vercel, Azure (App Service, Functions, Key Vault, Storage Queues), AWS (S3, CloudFront, ECS)
-- **AI** · Claude (API and Claude Code), tool use and agents, evaluation behind deterministic fallbacks, local models with Ollama
-- **Quality** · Vitest, Playwright, pgTAP, mutation testing, GitHub Actions
-
 ---
 
 Most of my commits are in private repositories, so the contribution graph is the best public trace of the day to day.
-
-**Get in touch:** [LinkedIn](https://www.linkedin.com/in/alpaureis/) · [alpau.reis@gmail.com](mailto:alpau.reis@gmail.com) · [Certifications on Credly](https://www.credly.com/users/alpaureis)
