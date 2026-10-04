@@ -12,7 +12,7 @@ Broward County, Florida · open to full-time roles and selected freelance work
   <img src="https://skillicons.dev/icons?i=ts,nextjs,react,tailwind,supabase,postgres,azure,aws,vercel,rust,tauri,py,cs,redis,vitest,githubactions&perline=16" alt="TypeScript, Next.js, React, Tailwind, Supabase, PostgreSQL, Azure, AWS, Vercel, Rust, Tauri, Python, C#, Redis, Vitest, GitHub Actions" />
 </p>
 
-Also in daily use: Claude (API and Claude Code), Playwright, pgTAP, mutation testing, Stripe, DuckDB, Ollama.
+Also in daily use: Claude (API and Claude Code), Codex, Playwright, pgTAP, mutation testing, Stripe, DuckDB, Ollama.
 
 ---
 
@@ -164,4 +164,4 @@ flowchart LR
 
 ---
 
-Most of my commits are in private repositories, so the contribution graph is the best public trace of the day to day.
+Most of my commits are in private repositories, so the contribution graph is the best public trace of what I am working on day to day.
