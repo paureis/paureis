@@ -153,15 +153,4 @@ flowchart LR
 
 ---
 
-## How I work
-
-- **Tests start from a clean seed.** If a suite only passes after another one ran, that is a bug in the suite.
-- **Security is a layer in the database**, not a check in the UI: row-level security, forced two-factor, audit triggers, secrets never in the repository or in a command.
-- **Staging before production, always**, with additive migrations and a smoke test after every deploy.
-- **A written rule that gets broken three times becomes a hook, a script, a lint rule or a CI gate.**
-- **AI agents with a process around them.** I orchestrate multi-agent work the way I would run a small team: read-only agents audit the code before a design exists, a critic reads the brief before a builder touches anything, the builder's report has a "not done" section, and review loops are capped. Mutation testing checks that the tests can actually fail. Nothing is merged or pushed until I review it and approve.
-- **I measure cost**: CI minutes, model tokens, cloud invoices.
-
----
-
 Most of my commits are in private repositories, so the contribution graph is the best public trace of what I am working on day to day.
