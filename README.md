@@ -133,14 +133,12 @@ flowchart LR
 
 ## Stack
 
-| | |
-|---|---|
-| **Languages** | TypeScript, Python, C#, Rust, SQL |
-| **Web** | Next.js (App Router), React, Tailwind |
-| **Data** | PostgreSQL (Supabase, row-level security), Azure SQL, DuckDB, Redis |
-| **Cloud** | Vercel, Azure (App Service, Functions, Key Vault, Storage Queues), AWS (S3, CloudFront, ECS) |
-| **AI** | Claude (API and Claude Code), tool use and agents, evaluation behind deterministic fallbacks, local models with Ollama |
-| **Quality** | Vitest, Playwright, pgTAP, mutation testing, GitHub Actions |
+- **Languages** · TypeScript, Python, C#, Rust, SQL
+- **Web** · Next.js (App Router), React, Tailwind
+- **Data** · PostgreSQL (Supabase, row-level security), Azure SQL, DuckDB, Redis
+- **Cloud** · Vercel, Azure (App Service, Functions, Key Vault, Storage Queues), AWS (S3, CloudFront, ECS)
+- **AI** · Claude (API and Claude Code), tool use and agents, evaluation behind deterministic fallbacks, local models with Ollama
+- **Quality** · Vitest, Playwright, pgTAP, mutation testing, GitHub Actions
 
 ---
 
