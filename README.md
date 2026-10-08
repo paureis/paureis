@@ -149,7 +149,7 @@ flowchart LR
 
 ### Open source
 
-- **[pau-skills](https://github.com/paureis/pau-skills)** · the Claude Code skills, hooks and scripts behind the process described below, as an installable plugin marketplace: 14 skills and 4 hooks, each marked original or adapted, with about 100 tests.
+- **[pau-skills](https://github.com/paureis/pau-skills)** · the Claude Code skills, hooks and scripts behind the process described below, as an installable plugin marketplace: 22 skills and 11 hooks, each marked original or adapted, with about 100 tests.
 - **[cloudpin](https://github.com/paureis/cloudpin)** · pins the cloud accounts a project uses (Azure, AWS, Google Cloud, Vercel, GitHub, Kubernetes) in a `.cloudpin.yml` and blocks any command, from a person or an AI agent, that would run on a different one. Protected environments ask before changing anything, agent hooks cover Claude Code, Codex, Cursor, Gemini CLI and Copilot CLI, and when it can't tell which account a command would use, it stops instead of guessing. About 510 tests. [npm](https://www.npmjs.com/package/cloudpin).
 - **[BurnRate](https://github.com/paureis/BurnRate)** · a local-first subscription tracker with no backend, no account and no API key. Share pages, the preview image and a live calendar feed are rendered purely from the URL. Includes a dependency-free QR encoder and about 530 tests. [Live demo](https://burnrate-bay.vercel.app).
 
