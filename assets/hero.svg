@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240" role="img" aria-labelledby="t d">
+  <title id="t">Alvaro "Pau" Reis, AI engineer</title>
+  <desc id="d">Alvaro "Pau" Reis, AI engineer in Broward County, Florida. I build multi-tenant products end to end. Agents write code. Tests decide what ships. No agent grades its own work. Broken rules become automatic checks.</desc>
+  <defs>
+    <radialGradient id="g1"><stop offset="0" stop-color="#54aeff" stop-opacity="0.35"/><stop offset="1" stop-color="#54aeff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2"><stop offset="0" stop-color="#c297ff" stop-opacity="0.35"/><stop offset="1" stop-color="#c297ff" stop-opacity="0"/></radialGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    .name { font-size: 44px; font-weight: 700; }
+    .role { font-size: 18px; fill: #59636e; }
+    .type { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 22px; }
+    .prompt { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 22px; fill: #0969da; font-weight: 700; }
+    .cover { fill: #ffffff; }
+    .caret { fill: #0969da; animation: blink 1s steps(1) infinite; }
+    [class^="ph"] { opacity: 0; animation: vis 16s infinite; }
+    .drift1 { animation: drift 14s ease-in-out infinite alternate; }
+    .drift2 { animation: drift 18s ease-in-out infinite alternate-reverse; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes vis { 0%, 24% { opacity: 1; } 24.5%, 100% { opacity: 0; } }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(-30px, 20px); } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    @keyframes type0 { 0% { transform: translateX(0); animation-timing-function: steps(41); }
+      8% { transform: translateX(517px); } 20% { transform: translateX(517px); animation-timing-function: steps(14); }
+      23%, 100% { transform: translateX(0); } }
+    .ty0 { animation: type0 16s infinite; }
+    @keyframes type1 { 0% { transform: translateX(0); animation-timing-function: steps(43); }
+      8% { transform: translateX(542px); } 20% { transform: translateX(542px); animation-timing-function: steps(15); }
+      23%, 100% { transform: translateX(0); } }
+    .ty1 { animation: type1 16s infinite; }
+    @keyframes type2 { 0% { transform: translateX(0); animation-timing-function: steps(29); }
+      8% { transform: translateX(366px); } 20% { transform: translateX(366px); animation-timing-function: steps(10); }
+      23%, 100% { transform: translateX(0); } }
+    .ty2 { animation: type2 16s infinite; }
+    @keyframes type3 { 0% { transform: translateX(0); animation-timing-function: steps(37); }
+      8% { transform: translateX(467px); } 20% { transform: translateX(467px); animation-timing-function: steps(13); }
+      23%, 100% { transform: translateX(0); } }
+    .ty3 { animation: type3 16s infinite; }
+    @media (prefers-color-scheme: dark) {
+      .role { fill: #9198a1; }
+      .prompt, .caret { fill: #4493f8; }
+      .cover { fill: #0d1117; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .edge, .drift1, .drift2, .pulse, [class^="ph"], [class*=" ty"] { animation: none; }
+      .ph0 { opacity: 1; } .cover, .caret { display: none; }
+    }
+  </style>
+  <rect class="bg" width="1000" height="240" rx="16"/>
+  <text class="name" x="48" y="92">Alvaro "Pau" Reis</text>
+  <text class="role" x="50" y="128">AI engineer · Broward County, Florida</text>
+  <text class="prompt" x="48" y="186">›</text>
+  <g class="ph ph0" style="animation-delay:0s">
+    <text class="type" x="76" y="186">I build multi-tenant products end to end.</text>
+    <rect class="cover ty0" style="animation-delay:0s" x="74" y="162" width="541" height="34"/>
+    <g class="ty0" style="animation-delay:0s"><rect class="caret" x="77" y="167" width="3" height="24"/></g>
+  </g>
+  <g class="ph" style="animation-delay:4s">
+    <text class="type" x="76" y="186">Agents write code. Tests decide what ships.</text>
+    <rect class="cover ty1" style="animation-delay:4s" x="74" y="162" width="566" height="34"/>
+    <g class="ty1" style="animation-delay:4s"><rect class="caret" x="77" y="167" width="3" height="24"/></g>
+  </g>
+  <g class="ph" style="animation-delay:8s">
+    <text class="type" x="76" y="186">No agent grades its own work.</text>
+    <rect class="cover ty2" style="animation-delay:8s" x="74" y="162" width="390" height="34"/>
+    <g class="ty2" style="animation-delay:8s"><rect class="caret" x="77" y="167" width="3" height="24"/></g>
+  </g>
+  <g class="ph" style="animation-delay:12s">
+    <text class="type" x="76" y="186">Broken rules become automatic checks.</text>
+    <rect class="cover ty3" style="animation-delay:12s" x="74" y="162" width="491" height="34"/>
+    <g class="ty3" style="animation-delay:12s"><rect class="caret" x="77" y="167" width="3" height="24"/></g>
+  </g>
+  <!-- The glow sits above the typing mask, so the mask blends in wherever it slides. -->
+  <circle class="drift1" cx="900" cy="90" r="160" fill="url(#g1)"/>
+  <circle class="drift2" cx="950" cy="190" r="140" fill="url(#g2)"/>
+  <path class="edge" d="M796 120 C840 120 850 66 898 66" marker-end="url(#a)"/>
+  <path class="edge" d="M796 120 L906 120" marker-end="url(#a)"/>
+  <path class="edge" d="M796 120 C840 120 850 174 898 174" marker-end="url(#a)"/>
+  <circle class="core pulse" cx="772" cy="120" r="24"/>
+  <circle class="ai" cx="920" cy="66" r="13"/>
+  <circle class="ai" cx="928" cy="120" r="13"/>
+  <circle class="ai" cx="920" cy="174" r="13"/>
+</svg>

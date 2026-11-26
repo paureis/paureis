@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 604" width="1000" height="604" role="img" aria-labelledby="t d">
+  <title id="t">The 41 skills in pau-skills</title>
+  <desc id="d">41 skills in five groups: know what to build, prove it works, run many agents, stay safe, keep improving. The ones used most: session-close, safe-merge, lean-subagent-dev, parallel-worktrees.</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    .sk-heavy { fill: #0969da; stroke: #0969da; }
+    .sk-regular { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .sk-situational { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .sk-glow { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.2; opacity: 0; animation: wave 7s infinite; }
+    .sk-t { font-size: 12.5px; }
+    .sk-t-heavy { fill: #ffffff; font-weight: 600; }
+    .sk-t-situational { fill: #59636e; }
+    @keyframes wave { 0% { opacity: 0; } 5% { opacity: 0.9; } 14%, 100% { opacity: 0; } }
+    @media (prefers-color-scheme: dark) {
+      .sk-heavy { fill: #1f6feb; stroke: #1f6feb; }
+      .sk-regular { fill: #0c2d6b; stroke: #1f6feb; }
+      .sk-situational { fill: #161b22; stroke: #30363d; }
+      .sk-glow { fill: #0c2d6b; stroke: #1f6feb; }
+      .sk-t-situational { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge, .sk-glow { animation: none; } }
+  </style>
+  <rect class="bg" width="1000" height="604" rx="12"/>
+  <text class="label" x="20" y="34">Know what to build</text>
+  <text class="sub" x="20" y="54">11 skills</text>
+  <rect class="sk-regular" x="20" y="78" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-regular" x="106" y="98" text-anchor="middle">brainstorm</text>
+  <rect class="sk-regular" x="20" y="116" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-regular" x="106" y="136" text-anchor="middle">grill-me</text>
+  <rect class="sk-situational" x="20" y="154" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.24s" x="20" y="154" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="174" text-anchor="middle">to-prd</text>
+  <rect class="sk-situational" x="20" y="192" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.36s" x="20" y="192" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="212" text-anchor="middle">to-issues</text>
+  <rect class="sk-situational" x="20" y="230" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.48s" x="20" y="230" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="250" text-anchor="middle">architect</text>
+  <rect class="sk-situational" x="20" y="268" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.60s" x="20" y="268" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="288" text-anchor="middle">reframe</text>
+  <rect class="sk-situational" x="20" y="306" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.72s" x="20" y="306" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="326" text-anchor="middle">sharpen</text>
+  <rect class="sk-situational" x="20" y="344" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.84s" x="20" y="344" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="364" text-anchor="middle">engineering-principles</text>
+  <rect class="sk-situational" x="20" y="382" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.96s" x="20" y="382" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="402" text-anchor="middle">lazy-senior</text>
+  <rect class="sk-situational" x="20" y="420" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.08s" x="20" y="420" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="440" text-anchor="middle" textLength="154" lengthAdjust="spacingAndGlyphs">improve-codebase-architecture</text>
+  <rect class="sk-situational" x="20" y="458" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.20s" x="20" y="458" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="106" y="478" text-anchor="middle">agent-friendly-audit</text>
+  <text class="label" x="216" y="34">Prove it works</text>
+  <text class="sub" x="216" y="54">12 skills</text>
+  <rect class="sk-situational" x="216" y="78" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.35s" x="216" y="78" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="98" text-anchor="middle">tdd</text>
+  <rect class="sk-situational" x="216" y="116" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.47s" x="216" y="116" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="136" text-anchor="middle">evaluator</text>
+  <rect class="sk-situational" x="216" y="154" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.59s" x="216" y="154" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="174" text-anchor="middle">mutation-test</text>
+  <rect class="sk-situational" x="216" y="192" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.71s" x="216" y="192" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="212" text-anchor="middle">review-triage</text>
+  <rect class="sk-situational" x="216" y="230" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.83s" x="216" y="230" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="250" text-anchor="middle">verify-app</text>
+  <rect class="sk-situational" x="216" y="268" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.95s" x="216" y="268" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="288" text-anchor="middle">bug-fix</text>
+  <rect class="sk-situational" x="216" y="306" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.07s" x="216" y="306" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="326" text-anchor="middle">flaky-test-hunt</text>
+  <rect class="sk-situational" x="216" y="344" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.19s" x="216" y="344" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="364" text-anchor="middle">migration-review</text>
+  <rect class="sk-situational" x="216" y="382" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.31s" x="216" y="382" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="402" text-anchor="middle">launch-readiness</text>
+  <rect class="sk-situational" x="216" y="420" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.43s" x="216" y="420" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="440" text-anchor="middle">hillclimb</text>
+  <rect class="sk-situational" x="216" y="458" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.55s" x="216" y="458" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="478" text-anchor="middle">ci-cost-and-cadence</text>
+  <rect class="sk-situational" x="216" y="496" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.67s" x="216" y="496" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="302" y="516" text-anchor="middle">skill-eval</text>
+  <text class="label" x="412" y="34">Run many agents</text>
+  <text class="sub" x="412" y="54">7 skills</text>
+  <rect class="sk-heavy" x="412" y="78" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-heavy" x="498" y="98" text-anchor="middle">lean-subagent-dev</text>
+  <rect class="sk-heavy" x="412" y="116" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-heavy" x="498" y="136" text-anchor="middle">parallel-worktrees</text>
+  <rect class="sk-situational" x="412" y="154" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:0.94s" x="412" y="154" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="498" y="174" text-anchor="middle">arena</text>
+  <rect class="sk-situational" x="412" y="192" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.06s" x="412" y="192" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="498" y="212" text-anchor="middle">codebase-oracle</text>
+  <rect class="sk-situational" x="412" y="230" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.18s" x="412" y="230" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="498" y="250" text-anchor="middle">methodology</text>
+  <rect class="sk-situational" x="412" y="268" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.30s" x="412" y="268" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="498" y="288" text-anchor="middle">overnight-run</text>
+  <rect class="sk-situational" x="412" y="306" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.42s" x="412" y="306" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="498" y="326" text-anchor="middle">geppetto</text>
+  <text class="label" x="608" y="34">Stay safe</text>
+  <text class="sub" x="608" y="54">4 skills</text>
+  <rect class="sk-heavy" x="608" y="78" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-heavy" x="694" y="98" text-anchor="middle">safe-merge</text>
+  <rect class="sk-situational" x="608" y="116" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.17s" x="608" y="116" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="694" y="136" text-anchor="middle">rule-to-hook</text>
+  <rect class="sk-situational" x="608" y="154" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.29s" x="608" y="154" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="694" y="174" text-anchor="middle">dependency-upgrade</text>
+  <rect class="sk-situational" x="608" y="192" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.41s" x="608" y="192" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="694" y="212" text-anchor="middle" textLength="154" lengthAdjust="spacingAndGlyphs">dependency-security-audit</text>
+  <text class="label" x="804" y="34">Keep improving</text>
+  <text class="sub" x="804" y="54">7 skills</text>
+  <rect class="sk-heavy" x="804" y="78" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-heavy" x="890" y="98" text-anchor="middle">session-close</text>
+  <rect class="sk-regular" x="804" y="116" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-regular" x="890" y="136" text-anchor="middle">handoff</text>
+  <rect class="sk-situational" x="804" y="154" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.64s" x="804" y="154" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="890" y="174" text-anchor="middle">retrospective</text>
+  <rect class="sk-regular" x="804" y="192" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-regular" x="890" y="212" text-anchor="middle">which-skill</text>
+  <rect class="sk-situational" x="804" y="230" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:1.88s" x="804" y="230" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="890" y="250" text-anchor="middle">instructions-audit</text>
+  <rect class="sk-situational" x="804" y="268" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:2.00s" x="804" y="268" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="890" y="288" text-anchor="middle">friction-review</text>
+  <rect class="sk-situational" x="804" y="306" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:2.12s" x="804" y="306" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="890" y="326" text-anchor="middle">project-setup</text>
+  <rect class="sk-heavy" x="20" y="561" width="34" height="18" rx="9"/>
+  <text class="sub" x="62" y="575">used most (10+ times)</text>
+  <rect class="sk-regular" x="218.6" y="561" width="34" height="18" rx="9"/>
+  <text class="sub" x="260.6" y="575">used regularly</text>
+  <rect class="sk-situational" x="371" y="561" width="34" height="18" rx="9"/>
+  <text class="sub" x="413" y="575">used when the situation calls for it</text>
+  <text class="note" x="980" y="575" text-anchor="end">usage over the last 90 days, November 2026</text>
+</svg>

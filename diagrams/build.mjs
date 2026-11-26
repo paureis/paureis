@@ -1,5 +1,11 @@
 // The README diagrams as data; render.mjs draws them. Run: node diagrams/build.mjs
+// The skill wall and the hero banner have their own files: skill-wall.mjs and hero.mjs.
 import { diagram, esc } from './render.mjs';
+import { buildSkillWall } from './skill-wall.mjs';
+import { buildHero } from './hero.mjs';
+
+buildSkillWall();
+buildHero();
 
 diagram({
   file: 'miconsultorio-architecture.svg',

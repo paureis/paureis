@@ -1,8 +1,10 @@
-# Alvaro "Pau" Reis
+<p align="center">
+  <img src="assets/hero.svg" width="100%" alt='Alvaro "Pau" Reis, AI engineer in Broward County, Florida.' />
+</p>
 
 **AI engineer. I build multi-tenant products end to end, and I use AI agents to assist my development without lowering the bar.**
 
-Broward County, Florida · open to full-time roles and selected freelance work
+Open to full-time roles and selected freelance work
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alpaureis/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:alpau.reis@gmail.com)
@@ -50,6 +52,12 @@ I build with AI agents every day, and I hold them to the same bar as any enginee
 - **No agent grades its own work.** A fresh agent that did not build the change tries to break it, claim by claim, and mutation tests break the code on purpose to prove the tests notice.
 - **A rule that keeps getting broken becomes code.** Hooks run on every step. They block leaked secrets, destructive commands, tests edited to pass, cloud commands aimed at the wrong account, and any "done" that no check backs up.
 - **It's all public.** The skills and hooks are in [pau-skills](https://github.com/paureis/pau-skills) and the wrong-account check is [cloudpin](https://github.com/paureis/cloudpin), each with its own tests.
+
+The steps above are the full method. The wall below is what I actually reach for: the lit skills are the ones I use most, and every other skill in the repo comes in when the situation calls for it. Not every task needs all of them.
+
+<p align="center">
+  <img src="assets/skill-wall.svg" width="100%" alt="All 41 pau-skills skills in five groups: know what to build, prove it works, run many agents, stay safe, keep improving. Used most: session-close, safe-merge, lean-subagent-dev and parallel-worktrees; used regularly: handoff, which-skill, grill-me and brainstorm." />
+</p>
 
 ---
 
@@ -166,10 +174,15 @@ An offline-first desktop tool for database consultants: it ingests SQL Server di
 
 ### Open source
 
-- **[pau-skills](https://github.com/paureis/pau-skills)** · the Claude Code skills, hooks and scripts behind the process described above, as an installable plugin marketplace: 41 skills and 16 hooks, each marked original or adapted, with over 2,100 tests.
+- **[pau-skills](https://github.com/paureis/pau-skills)** · the Claude Code skills, hooks and scripts behind the process described above, as an installable plugin marketplace: <!--stat:skills-->41<!--/stat--> skills and <!--stat:hooks-->16<!--/stat--> hooks, each marked original or adapted, with over 2,100 tests.
 - **[cloudpin](https://github.com/paureis/cloudpin)** · pins the cloud accounts a project uses (Azure, AWS, Google Cloud, Vercel, GitHub, Supabase, Cloudflare, Kubernetes) in a `.cloudpin.yml` and blocks any command, from a person or an AI agent, that would run on a different one. Protected environments ask before changing anything, agent hooks cover Claude Code, Codex, Cursor, Gemini CLI and Copilot CLI, and when it can't tell which account a command would use, it stops instead of guessing. Also a read-only MCP server, listed on the official MCP Registry, a [VS Code extension](https://github.com/paureis/cloudpin-vscode) and a [GitHub Action](https://github.com/paureis/cloudpin-action). About 2,400 tests. [npm](https://www.npmjs.com/package/cloudpin).
 - **[Recourse](https://github.com/paureis/recourse)** · the coverage-denial appeals tool featured above.
 
 ---
 
 Most of my commits are in private repositories, so the contribution graph is the best public trace of what I am working on day to day.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/paureis/paureis/output/github-snake-dark.svg" />
+  <img alt="My contribution graph, animated: a snake eats the past year of commits one square at a time." src="https://raw.githubusercontent.com/paureis/paureis/output/github-snake.svg" width="100%" />
+</picture>

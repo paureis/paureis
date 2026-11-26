@@ -7,7 +7,7 @@ mkdirSync(OUT, { recursive: true });
 
 export const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-const STYLE = `
+export const STYLE = `
     :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
     .bg { fill: #ffffff; }
     text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
