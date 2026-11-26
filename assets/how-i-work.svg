@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 404" width="1000" height="404" role="img" aria-labelledby="t d">
+  <title id="t">How I work with AI agents</title>
+  <desc id="d">I talk to one orchestrator session that plans and routes work to subagents: readers that search and fact-check, builders that each take one slice, and a fresh evaluator that attacks the result. Hooks check every tool call. Work moves through six steps, each with its own skills: decide (brainstorm, grill-me), plan (to-prd, to-issues), build (tdd, parallel-worktrees), prove (evaluator, mutation-test), ship (review-triage, safe-merge) and learn (retrospective, rule-to-hook).</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge { animation: none; } }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="head" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1000" height="404" rx="12"/>
+  <path class="edge" d="M140 94 L198 94" marker-end="url(#a)"/>
+  <path class="edge" d="M420 94 C454 94 454 38 488 38" marker-end="url(#a)"/>
+  <path class="edge" d="M420 94 L488 94" marker-end="url(#a)"/>
+  <path class="edge" d="M420 94 C454 94 454 150 488 150" marker-end="url(#a)"/>
+  <path class="edge" d="M790 94 C761 94 761 38 732 38" marker-end="url(#a)"/>
+  <path class="edge" d="M790 94 L732 94" marker-end="url(#a)"/>
+  <path class="edge" d="M790 94 C761 94 761 150 732 150" marker-end="url(#a)"/>
+  <rect class="human" x="20" y="70" width="120" height="48" rx="10"/>
+  <text class="label" x="80" y="99" text-anchor="middle">Me</text>
+  <rect class="core" x="200" y="64" width="220" height="60" rx="10"/>
+  <text class="label" x="310" y="91" text-anchor="middle">Orchestrator session</text>
+  <text class="sub" x="310" y="109" text-anchor="middle">plans, routes, checks</text>
+  <rect class="ai" x="490" y="14" width="240" height="48" rx="10"/>
+  <text class="label" x="610" y="35" text-anchor="middle">Readers</text>
+  <text class="sub" x="610" y="53" text-anchor="middle">search and fact-check</text>
+  <rect class="ai" x="490" y="70" width="240" height="48" rx="10"/>
+  <text class="label" x="610" y="91" text-anchor="middle">Builders</text>
+  <text class="sub" x="610" y="109" text-anchor="middle">one slice each, own branch</text>
+  <rect class="ai" x="490" y="126" width="240" height="48" rx="10"/>
+  <text class="label" x="610" y="147" text-anchor="middle">Fresh evaluator</text>
+  <text class="sub" x="610" y="165" text-anchor="middle">never grades its own work</text>
+  <rect class="guard" x="790" y="14" width="190" height="160" rx="10"/>
+  <text class="label" x="885" y="44" text-anchor="middle">Hooks on every step</text>
+  <text class="sub" x="885" y="72" text-anchor="middle">secrets, wrong cloud account</text>
+  <text class="sub" x="885" y="92" text-anchor="middle">destructive commands</text>
+  <text class="sub" x="885" y="112" text-anchor="middle">tests edited to pass</text>
+  <text class="sub" x="885" y="132" text-anchor="middle">"done" without proof</text>
+  
+  <style>
+    /* A step's highlight and caption share one fade: in at its turn, out before the next. */
+    .hl { fill: var(--hl-fill); stroke: var(--hl-stroke); stroke-width: 2.5; }
+    .hl, .cap { opacity: 0; animation: turn 21s infinite; }
+    @keyframes turn { 0% { opacity: 0; } 1.5%, 14.67% { opacity: 1; } 16.17%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .hl, .cap { animation: none; } .hl0, .cap0 { opacity: 1; } }
+  </style>
+  <text class="note" x="20" y="214">Every change moves through these steps, each run by its own skill:</text>
+  <rect class="panel" x="20" y="320" width="960" height="64" rx="12"/>
+  <rect class="box" x="20" y="232" width="150" height="58" rx="10"/>
+  <rect class="hl hl0" style="animation-delay:0s" x="20" y="232" width="150" height="58" rx="10"/>
+  <text class="label" x="95" y="257" text-anchor="middle">1 · Decide</text>
+  <text class="sub" style="font-size:11px" x="95" y="276" text-anchor="middle">brainstorm · grill-me</text>
+  <path class="edge" d="M170 261 L180 261" marker-end="url(#a)"/>
+  <rect class="box" x="182" y="232" width="150" height="58" rx="10"/>
+  <rect class="hl" style="animation-delay:3.5s" x="182" y="232" width="150" height="58" rx="10"/>
+  <text class="label" x="257" y="257" text-anchor="middle">2 · Plan</text>
+  <text class="sub" style="font-size:11px" x="257" y="276" text-anchor="middle">to-prd · to-issues</text>
+  <path class="edge" d="M332 261 L342 261" marker-end="url(#a)"/>
+  <rect class="box" x="344" y="232" width="150" height="58" rx="10"/>
+  <rect class="hl" style="animation-delay:7s" x="344" y="232" width="150" height="58" rx="10"/>
+  <text class="label" x="419" y="257" text-anchor="middle">3 · Build</text>
+  <text class="sub" style="font-size:11px" x="419" y="276" text-anchor="middle">tdd · parallel-worktrees</text>
+  <path class="edge" d="M494 261 L504 261" marker-end="url(#a)"/>
+  <rect class="box" x="506" y="232" width="150" height="58" rx="10"/>
+  <rect class="hl" style="animation-delay:10.5s" x="506" y="232" width="150" height="58" rx="10"/>
+  <text class="label" x="581" y="257" text-anchor="middle">4 · Prove</text>
+  <text class="sub" style="font-size:11px" x="581" y="276" text-anchor="middle">evaluator · mutation-test</text>
+  <path class="edge" d="M656 261 L666 261" marker-end="url(#a)"/>
+  <rect class="box" x="668" y="232" width="150" height="58" rx="10"/>
+  <rect class="hl" style="animation-delay:14s" x="668" y="232" width="150" height="58" rx="10"/>
+  <text class="label" x="743" y="257" text-anchor="middle">5 · Ship</text>
+  <text class="sub" style="font-size:11px" x="743" y="276" text-anchor="middle">review-triage · safe-merge</text>
+  <path class="edge" d="M818 261 L828 261" marker-end="url(#a)"/>
+  <rect class="box" x="830" y="232" width="150" height="58" rx="10"/>
+  <rect class="hl" style="animation-delay:17.5s" x="830" y="232" width="150" height="58" rx="10"/>
+  <text class="label" x="905" y="257" text-anchor="middle">6 · Learn</text>
+  <text class="sub" style="font-size:11px" x="905" y="276" text-anchor="middle">retrospective · rule-to-hook</text>
+  
+  <text class="caption cap cap0" style="animation-delay:0s" x="500" y="357" text-anchor="middle">Decide: before any code, I get questioned until every open choice has an answer.</text>
+  <text class="caption cap" style="animation-delay:3.5s" x="500" y="357" text-anchor="middle">Plan: the decision becomes a short spec, cut into slices that can each be built and checked alone.</text>
+  <text class="caption cap" style="animation-delay:7s" x="500" y="357" text-anchor="middle">Build: agents write the test first, then the code, each slice on its own branch so none collide.</text>
+  <text class="caption cap" style="animation-delay:10.5s" x="500" y="357" text-anchor="middle">Prove: a fresh agent tries to break the work, and tests are broken on purpose to show they can fail.</text>
+  <text class="caption cap" style="animation-delay:14s" x="500" y="357" text-anchor="middle">Ship: only the review findings that matter get fixed, in one round, then the reviewed commit is merged.</text>
+  <text class="caption cap" style="animation-delay:17.5s" x="500" y="357" text-anchor="middle">Learn: every correction becomes a rule, and a rule that keeps getting broken becomes an automatic check.</text>
+</svg>

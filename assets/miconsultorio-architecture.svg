@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" role="img" aria-labelledby="t d">
+  <title id="t">MiConsultorio architecture</title>
+  <desc id="d">Staff app, patient portal and operator console call a Next.js app on Vercel, which reaches Postgres with row-level security using the user's session, never a service key. Postgres records an audit trail through triggers; the app renders branded PDFs. A scheduled job feeds a message queue that sends WhatsApp reminders. Staging is seeded; production receives migrations only.</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge { animation: none; } }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="head" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1000" height="460" rx="12"/>
+  <rect class="group" x="760" y="300" width="220" height="140" rx="12"/>
+  <text class="sub" x="776" y="322">Environments</text>
+  <path class="edge" d="M190 64 C239 64 239 134 288 134" marker-end="url(#a)"/>
+  <path class="edge" d="M190 134 L288 134" marker-end="url(#a)"/>
+  <path class="edge" d="M190 204 C239 204 239 134 288 134" marker-end="url(#a)"/>
+  <path class="edge" d="M480 134 L698 134" marker-end="url(#a)"/>
+  <text class="note" x="589" y="124" text-anchor="middle">user session, never a service key</text>
+  <path class="edge" d="M805 164 L805 228" marker-end="url(#a)"/>
+  <path class="edge" d="M385 164 L385 228" marker-end="url(#a)"/>
+  <path class="edge" d="M190 352 L288 352" marker-end="url(#a)"/>
+  <path class="edge" d="M480 352 L548 352" marker-end="url(#a)"/>
+  <path class="edge" d="M870 368 L870 386" marker-end="url(#a)"/>
+  <text class="note" x="880" y="382" text-anchor="start">migrations only</text>
+  <rect class="human" x="20" y="40" width="170" height="48" rx="10"/>
+  <text class="label" x="105" y="69" text-anchor="middle">Staff app</text>
+  <rect class="human" x="20" y="110" width="170" height="48" rx="10"/>
+  <text class="label" x="105" y="139" text-anchor="middle">Patient portal</text>
+  <rect class="human" x="20" y="180" width="170" height="48" rx="10"/>
+  <text class="label" x="105" y="209" text-anchor="middle">Operator console</text>
+  <rect class="core" x="290" y="104" width="190" height="60" rx="10"/>
+  <text class="label" x="385" y="131" text-anchor="middle">Next.js</text>
+  <text class="sub" x="385" y="149" text-anchor="middle">App Router on Vercel</text>
+  <rect class="core" x="700" y="104" width="210" height="60" rx="10"/>
+  <text class="label" x="805" y="131" text-anchor="middle">Postgres 17</text>
+  <text class="sub" x="805" y="149" text-anchor="middle">row-level security per role</text>
+  <rect class="guard" x="715" y="230" width="180" height="44" rx="10"/>
+  <text class="label" x="805" y="257" text-anchor="middle">Audit triggers</text>
+  <rect class="box" x="295" y="230" width="180" height="44" rx="10"/>
+  <text class="label" x="385" y="257" text-anchor="middle">Branded PDFs</text>
+  <rect class="box" x="20" y="330" width="170" height="44" rx="10"/>
+  <text class="label" x="105" y="357" text-anchor="middle">Scheduled job</text>
+  <rect class="box" x="290" y="330" width="190" height="44" rx="10"/>
+  <text class="label" x="385" y="357" text-anchor="middle">Message queue</text>
+  <rect class="box" x="550" y="330" width="180" height="44" rx="10"/>
+  <text class="label" x="640" y="357" text-anchor="middle">WhatsApp reminders</text>
+  <rect class="box" x="780" y="332" width="180" height="36" rx="10"/>
+  <text class="label" x="870" y="355" text-anchor="middle">Staging · seeded</text>
+  <rect class="box" x="780" y="388" width="180" height="36" rx="10"/>
+  <text class="label" x="870" y="411" text-anchor="middle">Production</text>
+  
+</svg>

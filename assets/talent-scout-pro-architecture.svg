@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Talent Scout Pro architecture</title>
+  <desc id="d">Recruiters use a web app backed by a shared database. Searches go through queues: sourcing, evaluation with Claude, then finalizing and notifying, with Redis enforcing distributed rate limits. Platform admins provision a dedicated database per corporate tenant from an admin console through infrastructure as code and migrations.</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge { animation: none; } }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="head" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1000" height="420" rx="12"/>
+  <path class="edge" d="M180 64 L238 64" marker-end="url(#a)"/>
+  <path class="edge" d="M430 64 L738 64" marker-end="url(#a)"/>
+  <path class="edge" d="M335 94 L335 178" marker-end="url(#a)"/>
+  <text class="note" x="345" y="142" text-anchor="start">queue</text>
+  <path class="edge" d="M430 208 L488 208" marker-end="url(#a)"/>
+  <text class="note" x="459" y="198" text-anchor="middle">queue</text>
+  <path class="edge" d="M680 208 L738 208" marker-end="url(#a)"/>
+  <text class="note" x="709" y="198" text-anchor="middle">queue</text>
+  <path class="edge" d="M860 180 L860 96" marker-end="url(#a)"/>
+  <path class="edge" d="M180 208 L238 208" marker-end="url(#a)"/>
+  <text class="note" x="209" y="198" text-anchor="middle">rate limits</text>
+  <path class="edge" d="M180 360 L238 360" marker-end="url(#a)"/>
+  <path class="edge" d="M430 360 L488 360" marker-end="url(#a)"/>
+  <path class="edge" d="M680 360 L738 360" marker-end="url(#a)"/>
+  <rect class="human" x="20" y="40" width="160" height="48" rx="10"/>
+  <text class="label" x="100" y="69" text-anchor="middle">Recruiter</text>
+  <rect class="core" x="240" y="34" width="190" height="60" rx="10"/>
+  <text class="label" x="335" y="61" text-anchor="middle">Web app</text>
+  <text class="sub" x="335" y="79" text-anchor="middle">Entra ID sign-in</text>
+  <rect class="core" x="740" y="34" width="240" height="60" rx="10"/>
+  <text class="label" x="860" y="61" text-anchor="middle">Shared database</text>
+  <text class="sub" x="860" y="79" text-anchor="middle">serverless Azure SQL</text>
+  <rect class="guard" x="20" y="186" width="160" height="44" rx="10"/>
+  <text class="label" x="100" y="213" text-anchor="middle">Redis</text>
+  <rect class="box" x="240" y="180" width="190" height="56" rx="10"/>
+  <text class="label" x="335" y="205" text-anchor="middle">Find candidates</text>
+  <text class="sub" x="335" y="223" text-anchor="middle">Azure Functions</text>
+  <rect class="ai" x="490" y="180" width="190" height="56" rx="10"/>
+  <text class="label" x="585" y="205" text-anchor="middle">Evaluate</text>
+  <text class="sub" x="585" y="223" text-anchor="middle">Claude scores each fit</text>
+  <rect class="box" x="740" y="180" width="240" height="56" rx="10"/>
+  <text class="label" x="860" y="213" text-anchor="middle">Finalize and notify</text>
+  <rect class="human" x="20" y="336" width="160" height="48" rx="10"/>
+  <text class="label" x="100" y="365" text-anchor="middle">Platform admin</text>
+  <rect class="core" x="240" y="330" width="190" height="60" rx="10"/>
+  <text class="label" x="335" y="365" text-anchor="middle">Admin console</text>
+  <rect class="box" x="490" y="336" width="190" height="48" rx="10"/>
+  <text class="label" x="585" y="365" text-anchor="middle">Infrastructure as code</text>
+  <rect class="core" x="740" y="330" width="240" height="60" rx="10"/>
+  <text class="label" x="860" y="357" text-anchor="middle">Dedicated database</text>
+  <text class="sub" x="860" y="375" text-anchor="middle">one per corporate tenant</text>
+  
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="1000" height="450" role="img" aria-labelledby="t d">
+  <title id="t">RefreshRadar architecture</title>
+  <desc id="d">A cron job every 15 minutes starts a poller that holds a single-run lease and reads Power BI with a read-only, per-tenant token signed by a certificate whose key stays in Azure Key Vault. Detectors find failed, missing and disabled refreshes. An error classifier tries a deterministic catalog, then a cache, and calls Claude only when both miss. Alerts go through an outbox to email and signed webhooks.</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge { animation: none; } }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="head" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1000" height="450" rx="12"/>
+  <path class="edge" d="M190 64 L268 64" marker-end="url(#a)"/>
+  <path class="edge" d="M190 174 C229 174 229 64 268 64" marker-end="url(#a)"/>
+  <text class="note" x="20" y="222" text-anchor="start">signs; no secret stored</text>
+  <path class="edge" d="M470 64 L758 64" marker-end="url(#a)"/>
+  <text class="note" x="614" y="54" text-anchor="middle">read-only, per tenant</text>
+  <path class="edge" d="M370 94 L370 198" marker-end="url(#a)"/>
+  <path class="edge" d="M470 230 L528 230" marker-end="url(#a)"/>
+  <path class="edge" d="M720 230 C749 230 749 154 778 154" marker-end="url(#a)"/>
+  <path class="edge" d="M720 230 L778 230" marker-end="url(#a)"/>
+  <path class="edge" d="M720 230 C749 230 749 310 778 310" marker-end="url(#a)"/>
+  <path class="edge" d="M370 260 L370 338" marker-end="url(#a)"/>
+  <path class="edge" d="M470 364 C499 364 499 350 528 350" marker-end="url(#a)"/>
+  <path class="edge" d="M470 364 C499 364 499 406 528 406" marker-end="url(#a)"/>
+  <rect class="box" x="20" y="40" width="170" height="48" rx="10"/>
+  <text class="label" x="105" y="69" text-anchor="middle">Every 15 minutes</text>
+  <rect class="guard" x="20" y="150" width="170" height="48" rx="10"/>
+  <text class="label" x="105" y="179" text-anchor="middle">Azure Key Vault</text>
+  <rect class="core" x="270" y="34" width="200" height="60" rx="10"/>
+  <text class="label" x="370" y="61" text-anchor="middle">Poller</text>
+  <text class="sub" x="370" y="79" text-anchor="middle">one run at a time</text>
+  <rect class="human" x="760" y="40" width="220" height="48" rx="10"/>
+  <text class="label" x="870" y="69" text-anchor="middle">Power BI</text>
+  <rect class="core" x="270" y="200" width="200" height="60" rx="10"/>
+  <text class="label" x="370" y="227" text-anchor="middle">Detectors</text>
+  <text class="sub" x="370" y="245" text-anchor="middle">failed · missing · disabled</text>
+  <rect class="core" x="530" y="200" width="190" height="60" rx="10"/>
+  <text class="label" x="625" y="227" text-anchor="middle">Explain the error</text>
+  <text class="sub" x="625" y="245" text-anchor="middle">cheapest answer first</text>
+  <rect class="box" x="780" y="130" width="200" height="48" rx="10"/>
+  <text class="label" x="880" y="159" text-anchor="middle">1 · Known-error catalog</text>
+  <rect class="box" x="780" y="206" width="200" height="48" rx="10"/>
+  <text class="label" x="880" y="235" text-anchor="middle">2 · Cache</text>
+  <rect class="ai" x="780" y="282" width="200" height="56" rx="10"/>
+  <text class="label" x="880" y="307" text-anchor="middle">3 · Claude</text>
+  <text class="sub" x="880" y="325" text-anchor="middle">only if 1 and 2 miss</text>
+  <rect class="box" x="270" y="340" width="200" height="48" rx="10"/>
+  <text class="label" x="370" y="369" text-anchor="middle">Alert outbox</text>
+  <rect class="box" x="530" y="330" width="190" height="40" rx="10"/>
+  <text class="label" x="625" y="355" text-anchor="middle">Email</text>
+  <rect class="box" x="530" y="386" width="190" height="40" rx="10"/>
+  <text class="label" x="625" y="411" text-anchor="middle">Signed webhook</text>
+  
+</svg>

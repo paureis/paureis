@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" role="img" aria-labelledby="t d">
+  <title id="t">Desktop log-analysis workbench architecture</title>
+  <desc id="d">SQL Server log files go through parsers into an encrypted DuckDB database whose key lives in the operating system keystore. Rules and sampling feed an AI backend, either a local model that runs offline or a cloud model. The AI drafts findings, a person approves them, and only then is a report produced; every approval is written to a hash-chained audit log.</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge { animation: none; } }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="head" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1000" height="460" rx="12"/>
+  <path class="edge" d="M180 64 L238 64" marker-end="url(#a)"/>
+  <path class="edge" d="M420 64 L478 64" marker-end="url(#a)"/>
+  <path class="edge" d="M690 64 L758 64" marker-end="url(#a)"/>
+  <path class="edge" d="M870 88 L870 168" marker-end="url(#a)"/>
+  <path class="edge" d="M870 234 L870 318" marker-end="url(#a)"/>
+  <path class="edge" d="M760 344 L692 344" marker-end="url(#a)"/>
+  <path class="edge" d="M480 344 L422 344" marker-end="url(#a)"/>
+  <path class="edge" d="M585 374 L585 402" marker-end="url(#a)"/>
+  <rect class="human" x="20" y="40" width="160" height="48" rx="10"/>
+  <text class="label" x="100" y="69" text-anchor="middle">Log files</text>
+  <rect class="box" x="240" y="40" width="180" height="48" rx="10"/>
+  <text class="label" x="330" y="69" text-anchor="middle">Parsers</text>
+  <rect class="core" x="480" y="34" width="210" height="60" rx="10"/>
+  <text class="label" x="585" y="61" text-anchor="middle">Encrypted DuckDB</text>
+  <text class="sub" x="585" y="79" text-anchor="middle">key in the OS keystore</text>
+  <rect class="box" x="760" y="40" width="220" height="48" rx="10"/>
+  <text class="label" x="870" y="69" text-anchor="middle">Rules and sampling</text>
+  <rect class="ai" x="760" y="170" width="220" height="64" rx="10"/>
+  <text class="label" x="870" y="199" text-anchor="middle">AI backend</text>
+  <text class="sub" x="870" y="217" text-anchor="middle">local model offline, or cloud</text>
+  <rect class="box" x="760" y="320" width="220" height="48" rx="10"/>
+  <text class="label" x="870" y="349" text-anchor="middle">Draft findings</text>
+  <rect class="human" x="480" y="314" width="210" height="60" rx="10"/>
+  <text class="label" x="585" y="341" text-anchor="middle">Human approval</text>
+  <text class="sub" x="585" y="359" text-anchor="middle">nothing ships without it</text>
+  <rect class="box" x="240" y="320" width="180" height="48" rx="10"/>
+  <text class="label" x="330" y="349" text-anchor="middle">Client report</text>
+  <rect class="guard" x="480" y="404" width="210" height="44" rx="10"/>
+  <text class="label" x="585" y="431" text-anchor="middle">Hash-chained audit log</text>
+  
+</svg>

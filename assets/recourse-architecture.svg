@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-labelledby="t d">
+  <title id="t">Recourse pipeline</title>
+  <desc id="d">Muse Spark reads a denial letter into a case and works out which program's rules apply. It investigates public Florida Medicaid, Medicare and HIPAA documents; every finding is a quote checked against its page, and unsupported findings are struck out on screen. It argues the payer's side, then gives one of three verdicts: consistent, inconsistent or not settled. An open-weights model gives a second opinion on the same evidence. An inconsistent denial gets an appeal letter in which every sentence carries a verified citation. A human-verified golden set and reviewed denial letters measure the chain.</desc>
+  <style>
+    :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
+    .bg { fill: #ffffff; }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .box { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .core { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .ai { fill: #fbefff; stroke: #c297ff; stroke-width: 1.5; }
+    .human { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .guard { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.5; }
+    .group { fill: none; stroke: #d0d7de; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    .panel { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .edge { stroke: #656d76; stroke-width: 1.6; fill: none; stroke-dasharray: 7 5; animation: flow 1.2s linear infinite; }
+    .head { fill: #656d76; }
+    .label { font-size: 15px; font-weight: 600; }
+    .sub { font-size: 12px; fill: #59636e; }
+    .note { font-size: 12px; fill: #59636e; font-style: italic; }
+    .caption { font-size: 15px; }
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    @media (prefers-color-scheme: dark) {
+      :root { --hl-fill: #3b2e00; --hl-stroke: #d29922; }
+      .bg { fill: #0d1117; }
+      text { fill: #e6edf3; }
+      .box, .panel { fill: #161b22; stroke: #30363d; }
+      .core { fill: #0c2d6b; stroke: #1f6feb; }
+      .ai { fill: #271052; stroke: #8957e5; }
+      .human { fill: #04260f; stroke: #2ea043; }
+      .guard { fill: #3b2e00; stroke: #9e6a03; }
+      .group { stroke: #30363d; }
+      .edge { stroke: #8b949e; }
+      .head { fill: #8b949e; }
+      .sub, .note { fill: #9198a1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .edge { animation: none; } }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path class="head" d="M0 0 L10 5 L0 10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1000" height="500" rx="12"/>
+  <rect class="group" x="20" y="350" width="960" height="140" rx="12"/>
+  <text class="sub" x="36" y="372">Evaluation</text>
+  <path class="edge" d="M170 64 L208 64" marker-end="url(#a)"/>
+  <path class="edge" d="M400 64 L438 64" marker-end="url(#a)"/>
+  <path class="edge" d="M670 64 L708 64" marker-end="url(#a)"/>
+  <path class="edge" d="M845 94 L845 158" marker-end="url(#a)"/>
+  <path class="edge" d="M710 190 L592 190" marker-end="url(#a)"/>
+  <text class="note" x="651" y="180" text-anchor="middle">checked again</text>
+  <path class="edge" d="M845 220 L845 268" marker-end="url(#a)"/>
+  <text class="note" x="855" y="250" text-anchor="start">if inconsistent</text>
+  <path class="edge" d="M320 402 C369 402 369 429 418 429" marker-end="url(#a)"/>
+  <path class="edge" d="M320 456 C369 456 369 429 418 429" marker-end="url(#a)"/>
+  <rect class="human" x="20" y="40" width="150" height="48" rx="10"/>
+  <text class="label" x="95" y="69" text-anchor="middle">Denial letter</text>
+  <rect class="ai" x="210" y="34" width="190" height="60" rx="10"/>
+  <text class="label" x="305" y="61" text-anchor="middle">Read and route</text>
+  <text class="sub" x="305" y="79" text-anchor="middle">which rules apply</text>
+  <rect class="guard" x="440" y="34" width="230" height="60" rx="10"/>
+  <text class="label" x="555" y="61" text-anchor="middle">Investigate</text>
+  <text class="sub" x="555" y="79" text-anchor="middle">every quote checked on its page</text>
+  <rect class="ai" x="710" y="34" width="270" height="60" rx="10"/>
+  <text class="label" x="845" y="61" text-anchor="middle">Argue the payer's side</text>
+  <text class="sub" x="845" y="79" text-anchor="middle">before deciding</text>
+  <rect class="core" x="710" y="160" width="270" height="60" rx="10"/>
+  <text class="label" x="845" y="187" text-anchor="middle">Verdict</text>
+  <text class="sub" x="845" y="205" text-anchor="middle">consistent · inconsistent · not settled</text>
+  <rect class="ai" x="340" y="160" width="250" height="60" rx="10"/>
+  <text class="label" x="465" y="187" text-anchor="middle">Second opinion</text>
+  <text class="sub" x="465" y="205" text-anchor="middle">open-weights model, same evidence</text>
+  <rect class="human" x="710" y="270" width="270" height="60" rx="10"/>
+  <text class="label" x="845" y="297" text-anchor="middle">Appeal letter</text>
+  <text class="sub" x="845" y="315" text-anchor="middle">every sentence cited and verified</text>
+  <rect class="box" x="40" y="380" width="280" height="44" rx="10"/>
+  <text class="label" x="180" y="399" text-anchor="middle">Golden set</text>
+  <text class="sub" x="180" y="417" text-anchor="middle">human-verified questions</text>
+  <rect class="box" x="40" y="434" width="280" height="44" rx="10"/>
+  <text class="label" x="180" y="453" text-anchor="middle">Denial letters</text>
+  <text class="sub" x="180" y="471" text-anchor="middle">reviewed cases with known answers</text>
+  <rect class="core" x="420" y="395" width="300" height="68" rx="10"/>
+  <text class="label" x="570" y="426" text-anchor="middle">Measured runs</text>
+  <text class="sub" x="570" y="444" text-anchor="middle">verdict accuracy and cost per case</text>
+  
+</svg>
