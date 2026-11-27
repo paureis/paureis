@@ -187,7 +187,7 @@ The latest public releases across my open-source projects, refreshed every night
 <!--shipping:start-->
 | Project | Latest release | Date | Releases in the last 30 days |
 |---|---|---|---|
-| [pau-skills](https://github.com/paureis/pau-skills) | [v0.27.0](https://github.com/paureis/pau-skills/releases/tag/v0.27.0) | 2026-11-27 | 8 |
+| [pau-skills](https://github.com/paureis/pau-skills) | [v0.27.1](https://github.com/paureis/pau-skills/releases/tag/v0.27.1) | 2026-11-27 | 9 |
 | [cloudpin](https://github.com/paureis/cloudpin) | [v1.2.3](https://github.com/paureis/cloudpin/releases/tag/v1.2.3) | 2026-11-05 | 4 |
 | [cloudpin-action](https://github.com/paureis/cloudpin-action) | [v1.0.0](https://github.com/paureis/cloudpin-action/releases/tag/v1.0.0) | 2026-10-30 | 1 |
 <!--shipping:end-->
