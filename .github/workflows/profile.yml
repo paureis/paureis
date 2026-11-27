@@ -25,12 +25,14 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - run: node --test scripts/update-stats.test.mjs
       - run: node scripts/update-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit if the numbers changed
         run: |
           if git diff --quiet README.md; then echo "No change"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Update the pau-skills counts in README.md"
+          git commit -am "Refresh the pau-skills counts and the shipping log"
           git push
 
   snake:
