@@ -20,7 +20,7 @@ const GROUPS = [
     'overnight-run', 'geppetto']],
   ['Stay safe', ['safe-merge', 'rule-to-hook', 'dependency-upgrade', 'dependency-security-audit']],
   ['Keep improving', ['session-close', 'handoff', 'retrospective', 'which-skill', 'instructions-audit',
-    'friction-review', 'project-setup']],
+    'friction-review', 'project-setup', 'wizard']],
 ];
 
 export const level = (uses = 0) => (uses >= 10 ? 'heavy' : uses >= 2 ? 'regular' : 'situational');

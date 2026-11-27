@@ -1,6 +1,7 @@
 // The hero banner: name, a line that types itself out in turn, and a small agent graph with work flowing.
 import { writeFileSync } from 'node:fs';
 import { esc, STYLE } from './render.mjs';
+import { ART } from './hero-art.mjs';
 
 const PHRASES = [
   'I build multi-tenant products end to end.',
@@ -11,7 +12,9 @@ const PHRASES = [
 const SLOT = 4, CYCLE = SLOT * PHRASES.length; // seconds
 const TX = 76, TY = 186, CHAR_W = 12.6; // monospace at 22px: Consolas is about 12.1, SF Mono 13.2; the caret lands within a character
 
-export function buildHero(file = 'hero.svg', outDir = new URL('../assets/', import.meta.url)) {
+// The right-hand art is swappable; the options live in hero-art.mjs.
+export function buildHero({ file = 'hero.svg', outDir = new URL('../assets/', import.meta.url), art: artFn = ART.carousel } = {}) {
+  const art = artFn();
   const kf = [], lines = [];
   PHRASES.forEach((p, i) => {
     const w = Math.ceil(p.length * CHAR_W), n = p.length, d = `animation-delay:${i * SLOT}s`;
@@ -50,6 +53,7 @@ export function buildHero(file = 'hero.svg', outDir = new URL('../assets/', impo
     @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(-30px, 20px); } }
     @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
     ${kf.join('\n    ')}
+    ${art.css}
     @media (prefers-color-scheme: dark) {
       .role { fill: #9198a1; }
       .prompt, .caret { fill: #4493f8; }
@@ -68,13 +72,7 @@ export function buildHero(file = 'hero.svg', outDir = new URL('../assets/', impo
   <!-- The glow sits above the typing mask, so the mask blends in wherever it slides. -->
   <circle class="drift1" cx="900" cy="90" r="160" fill="url(#g1)"/>
   <circle class="drift2" cx="950" cy="190" r="140" fill="url(#g2)"/>
-  <path class="edge" d="M796 120 C840 120 850 66 898 66" marker-end="url(#a)"/>
-  <path class="edge" d="M796 120 L906 120" marker-end="url(#a)"/>
-  <path class="edge" d="M796 120 C840 120 850 174 898 174" marker-end="url(#a)"/>
-  <circle class="core pulse" cx="772" cy="120" r="24"/>
-  <circle class="ai" cx="920" cy="66" r="13"/>
-  <circle class="ai" cx="928" cy="120" r="13"/>
-  <circle class="ai" cx="920" cy="174" r="13"/>
+  ${art.svg}
 </svg>
 `;
   writeFileSync(new URL(file, outDir), svg);

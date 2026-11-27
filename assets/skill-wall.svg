@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 604" width="1000" height="604" role="img" aria-labelledby="t d">
-  <title id="t">The 41 skills in pau-skills</title>
-  <desc id="d">41 skills in five groups: know what to build, prove it works, run many agents, stay safe, keep improving. The ones used most: session-close, safe-merge, lean-subagent-dev, parallel-worktrees.</desc>
+  <title id="t">The 42 skills in pau-skills</title>
+  <desc id="d">42 skills in five groups: know what to build, prove it works, run many agents, stay safe, keep improving. The ones used most: session-close, safe-merge, lean-subagent-dev, parallel-worktrees.</desc>
   <style>
     :root { --hl-fill: #fff8c5; --hl-stroke: #bf8700; }
     .bg { fill: #ffffff; }
@@ -157,7 +157,7 @@
   <rect class="sk-glow" style="animation-delay:1.41s" x="608" y="192" width="172" height="30" rx="15"/>
   <text class="sk-t sk-t-situational" x="694" y="212" text-anchor="middle" textLength="154" lengthAdjust="spacingAndGlyphs">dependency-security-audit</text>
   <text class="label" x="804" y="34">Keep improving</text>
-  <text class="sub" x="804" y="54">7 skills</text>
+  <text class="sub" x="804" y="54">8 skills</text>
   <rect class="sk-heavy" x="804" y="78" width="172" height="30" rx="15"/>
   <text class="sk-t sk-t-heavy" x="890" y="98" text-anchor="middle">session-close</text>
   <rect class="sk-regular" x="804" y="116" width="172" height="30" rx="15"/>
@@ -176,6 +176,9 @@
   <rect class="sk-situational" x="804" y="306" width="172" height="30" rx="15"/>
   <rect class="sk-glow" style="animation-delay:2.12s" x="804" y="306" width="172" height="30" rx="15"/>
   <text class="sk-t sk-t-situational" x="890" y="326" text-anchor="middle">project-setup</text>
+  <rect class="sk-situational" x="804" y="344" width="172" height="30" rx="15"/>
+  <rect class="sk-glow" style="animation-delay:2.24s" x="804" y="344" width="172" height="30" rx="15"/>
+  <text class="sk-t sk-t-situational" x="890" y="364" text-anchor="middle">wizard</text>
   <rect class="sk-heavy" x="20" y="561" width="34" height="18" rx="9"/>
   <text class="sub" x="62" y="575">used most (10+ times)</text>
   <rect class="sk-regular" x="218.6" y="561" width="34" height="18" rx="9"/>

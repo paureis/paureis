@@ -56,7 +56,7 @@ I build with AI agents every day, and I hold them to the same bar as any enginee
 The steps above are the full method. The wall below is what I actually reach for: the lit skills are the ones I use most, and every other skill in the repo comes in when the situation calls for it. Not every task needs all of them.
 
 <p align="center">
-  <img src="assets/skill-wall.svg" width="100%" alt="All 41 pau-skills skills in five groups: know what to build, prove it works, run many agents, stay safe, keep improving. Used most: session-close, safe-merge, lean-subagent-dev and parallel-worktrees; used regularly: handoff, which-skill, grill-me and brainstorm." />
+  <img src="assets/skill-wall.svg" width="100%" alt="All 42 pau-skills skills in five groups: know what to build, prove it works, run many agents, stay safe, keep improving. Used most: session-close, safe-merge, lean-subagent-dev and parallel-worktrees; used regularly: handoff, which-skill, grill-me and brainstorm." />
 </p>
 
 ---
@@ -174,7 +174,7 @@ An offline-first desktop tool for database consultants: it ingests SQL Server di
 
 ### Open source
 
-- **[pau-skills](https://github.com/paureis/pau-skills)** · the Claude Code skills, hooks and scripts behind the process described above, as an installable plugin marketplace: <!--stat:skills-->41<!--/stat--> skills and <!--stat:hooks-->16<!--/stat--> hooks, each marked original or adapted, with over 2,100 tests.
+- **[pau-skills](https://github.com/paureis/pau-skills)** · the Claude Code skills, hooks and scripts behind the process described above, as an installable plugin marketplace: <!--stat:skills-->42<!--/stat--> skills and <!--stat:hooks-->16<!--/stat--> hooks, each marked original or adapted, with over 2,100 tests.
 - **[cloudpin](https://github.com/paureis/cloudpin)** · pins the cloud accounts a project uses (Azure, AWS, Google Cloud, Vercel, GitHub, Supabase, Cloudflare, Kubernetes) in a `.cloudpin.yml` and blocks any command, from a person or an AI agent, that would run on a different one. Protected environments ask before changing anything, agent hooks cover Claude Code, Codex, Cursor, Gemini CLI and Copilot CLI, and when it can't tell which account a command would use, it stops instead of guessing. Also a read-only MCP server, listed on the official MCP Registry, a [VS Code extension](https://github.com/paureis/cloudpin-vscode) and a [GitHub Action](https://github.com/paureis/cloudpin-action). About 2,400 tests. [npm](https://www.npmjs.com/package/cloudpin).
 - **[Recourse](https://github.com/paureis/recourse)** · the coverage-denial appeals tool featured above.
 
